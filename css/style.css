@@ -1,0 +1,233 @@
+
+:root{
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --main-color: #0ef;
+  }
+  
+  .bg-main{
+    background-color: var(--bg-color);
+  }
+  .bg-second{
+    background-color: var(--second-bg-color);
+  }
+  .main-color{
+    color: var(--main-color);
+  }
+  .form-control{
+    background-color: var(--second-bg-color)!important;
+    border: none!important;
+    color:white!important;
+  }
+  a{
+    text-decoration: none;
+    color: unset;
+  }
+/* ----  NavBar Style  ---- */
+.sticky{
+    border-bottom: 1.5px solid rgba(0,0,0,.2);
+}
+nav a{
+    transition: .8s ease;
+    color: white !important;
+}
+nav a:hover{
+    color: #0ef !important;
+}
+nav a.active{
+    color: #0ef !important;
+}
+  /* ----  Home Style  ---- */
+#home{
+    padding-top: 160px;
+}
+.img-home img{
+    animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.name-title{
+    font-size: calc(1.375rem + 1.5vw);
+}
+.homeIcon{
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+    margin-right: 10px;
+    transition: .8s ease;
+    cursor: pointer;
+}
+.homeIcon:hover{
+    background-color: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+.homeBtn{
+    background-color: #0ef;
+    color: black;
+    border-radius: 20%;
+    display: block;
+    padding: 10px 30px;
+    border: none;
+    box-shadow: 0 0 16px var(--main-color);
+    font-size: 30px;
+    color: #323946;
+    letter-spacing: .1rem;
+    transition: .8s ease;
+}
+.homeBtn:hover{
+    box-shadow: none;
+}
+/* ----  services Style  ---- */
+.iconCard{
+    border: 2px solid var(--second-bg-color);
+    transition: .5s ease;
+
+}
+.iconCard:hover{
+    border: 2px solid var(--main-color);
+    transform: scale(1.02);
+}
+/* ----  My Work Style  ---- */
+.workCard{
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 0 16px var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    
+  }
+  .workCard img{
+    transition: .5s ease;
+  }
+  .workCard:hover img{
+    transform: scale(1.1);
+  }
+  .workCard:hover .workLayer{
+    transform: translateY(0);
+  }
+  .workLayer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.01),var(--main-color));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 25px;
+    transform: translateY(100%);
+    transition: .5s ease;
+  }
+  .workCard i {
+    color: var(--bg-color);
+    font-size: 22px;
+  }
+  .workCard h4{
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .workCard p{
+    font-size: 17px;
+    margin-bottom: 40px;
+  }
+  .workLayer span{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    margin-right: 20px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 16px var(--bg-color);
+    transition: .5s ease;
+  }
+  .workLayer span:hover{
+    transform: scale(1.18);
+  }
+  #portfolio .nav-link.active{
+    background-color: var(--main-color);
+    border-radius: 12px;
+}
+
+/* ---------        Breakpoints     -------------- */
+/* @media (max-width:1200px) {
+    #about .container{
+        max-width: 95% !important;
+    }
+} */
+@media (max-width:750px) {
+    .footer-container{
+        flex-direction: column;
+    }
+}
+@media (max-width:650px) {
+    .container{
+        padding: 0 50px;
+    }
+    .homeBtn{
+        padding: 7px 20px;
+        font-size: 20px;
+    }
+}
+@media (max-width:450px) {
+    #contact .container{
+        padding: 0 10px;
+    }
+}
+@media (max-width:400px) {
+    .container{
+        padding: 0 30px;
+    }
+    #contact .container{
+        padding: 0 10px;
+    }
+    .homeBtn{
+        padding: 5px 15px;
+        font-size: 15px;
+    }
+    .multi{
+        font-size: calc(1.1rem + .9vw);
+    }
+}
+@media (max-width:340px) {
+    .container{
+        padding: 0 30px;
+    }
+    #contact .container{
+        padding: 0 10px;
+    }
+    .name-title{
+        font-size: calc(1.1rem + 1.5vw);
+    }
+    .workCard h4{
+        font-size: 18px;
+    }
+    .workCard p{
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .multi{
+        font-size: calc(1rem + .9vw);
+    }
+}
